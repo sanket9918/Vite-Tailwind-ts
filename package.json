@@ -9,6 +9,7 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "3.0.0",
     "@tailwindcss/postcss7-compat": "2.0.2",
+    "ml5": "^0.6.1",
     "preact": "^10.5.13",
     "preact-router": "^3.2.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
