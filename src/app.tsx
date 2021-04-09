@@ -1,6 +1,5 @@
 import Router, { Route } from 'preact-router';
 import Entry from './component/entry';
-import Header from './component/header';
 import Work from './component/work';
 
 const App = () => {

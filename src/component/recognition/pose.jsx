@@ -1,9 +1,7 @@
 import { Component, createRef } from 'preact'
-import ml5 from 'ml5'
+import { poseNet } from 'ml5'
 
 export default class Pose extends Component {
-
-
     constructor() {
         super();
         this.webCam = createRef();
@@ -17,7 +15,7 @@ export default class Pose extends Component {
     }
 
     initializeModel() {
-        this.poseNet = ml5.poseNet(this.webCam.current, () => {
+        this.poseNet = poseNet(this.webCam.current, () => {
             console.log("Model Initilaized");
             this.modelLoaded = true;
             this.poseNet.on('pose', (result) => {
@@ -113,7 +111,7 @@ export default class Pose extends Component {
                 <canvas ref={this.camCanvas} width={this.WIDTH} height={this.HEIGHT} style={{ textAlign: 'center', margin: 'auto' }} />
                 <video playsInline ref={this.webCam} width={this.WIDTH} height={this.HEIGHT} style={camStyle} />
                 {this.state.detected ? (<div className='px-6 py-4 bg-green-300 text-green-600 w-full sm:w-1/6 text-center mx-auto rounded-xl mt-6'>Found You!</div>) : (
-                    <div className='px-6 py-4 bg-red-300 text-red-600 w-full sm:w-1/2 text-center mx-auto rounded-xl mt-6'>Show Yourself</div>
+                    <div className='px-6 py-4 bg-red-300 text-red-600 w-full sm:w-1/6 text-center mx-auto rounded-xl mt-6'>Show Yourself</div>
                 )}
             </div>
         );

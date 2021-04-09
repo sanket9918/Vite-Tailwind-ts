@@ -10,7 +10,7 @@ const Header = () => {
                                 <div className="flex items-center justify-between w-full md:w-auto">
                                     <a href="/">
                                         <span className='sr-only'>Main</span>
-                                        <img src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Logo" className="h-8 w-auto sm:h-10" />
+                                        <h1 className='text-bold text-2xl'>PoseDetect</h1>
                                     </a>
                                 </div>
                             </div>
