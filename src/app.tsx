@@ -1,4 +1,3 @@
-import { Link } from 'preact-router';
 import Header from './component/header';
 
 const App = () => {
@@ -24,10 +23,9 @@ const App = () => {
           </p>
                 <div class="mt-5 sm:mt-8 sm:flex sm:justify-center">
                   <div class="rounded-md shadow">
-                    <Link href='/work'>
-                      <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-800 hover:bg-green-900 md:py-4 md:text-lg md:px-10">
-                        Get started
-              </a></Link>
+                    <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-800 hover:bg-green-900 md:py-4 md:text-lg md:px-10">
+                      Get started
+              </a>
                   </div>
 
                 </div>
